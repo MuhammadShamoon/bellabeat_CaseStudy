@@ -3,7 +3,8 @@
 
 ### Project Overview
 
-In this case study, we will work for Cyclistic, a fictional bike-share company in Chicago. The customers who purchase single-ride or full-day passes are called casual riders and customers who purchase annual memberships are Cyclistic annual members. The marketing director believes the company’s future success depends on maximizing the number of annual memberships. He has set a clear goal to *Design marketing strategies to convert casual riders into annual members. However, the marketing analyst team needs to understand how annual members and casual riders differ.*
+
+In this case study, we will work for Bellabeat, a high-tech manufacturer of health-focused products for women. Sršen, Chief Creative Officer of Bellabeat, knows that an analysis of available consumer data would reveal more opportunities for growth. She has asked the marketing analytics team to analyze smart device usage data to gain insight into how people already use their smart devices. Then, using this information, she would like high-level recommendations for how these trends can inform Bellabeat's marketing strategy.
 
 ### Data Sources
 
