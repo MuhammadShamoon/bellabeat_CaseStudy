@@ -20,9 +20,6 @@ In this case study, we will work for Bellabeat, a high-tech manufacturer of heal
 
 In the initial data preparation phase, we performed the following tasks:
 - Data loading and inspection.
-- Added Column “trip_length_min” to track the duration of each ride in minutes.
-- Added Column “day_of_week” to analyze customers' behaviour on weekdays and weekends. 
-- Handling missing values.
 - Data cleaning and formatting.
 
 ### Data Analysis
