@@ -7,13 +7,13 @@ In this case study, we will work for Bellabeat, a high-tech manufacturer of heal
 
 ### Data Sources
 
-Fitbit Fitness Tracker Data: This Kaggle data set contains the following personal fitness tracker data from thirty Fitbit users, including heart rate, steps, sleep monitoring and information about daily activity that can be used to explore users’ habits. 
+[Fitbit Fitness Tracker Data:](https://www.kaggle.com/arashnic/fitbit) This Kaggle data set contains personal fitness tracker data from thirty Fitbit users, including heart rate, steps, sleep monitoring and information about daily activity that can be used to explore users’ habits. 
 
 
 ### Tools
 
-- Excel - Data cleaning
-- BigQuery - Data analysis
+- Excel - Data preprocessing
+- R - Data analysis
 - Tableau - Creating visualizations
 
 ### Data Cleaning and Preparation
