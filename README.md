@@ -1,5 +1,4 @@
-# bellabeat_CaseStudy
-# Cyclistic Customer Analysis
+# Bellabeat_Marketing_Analysis
 
 ### Project Overview
 
@@ -8,7 +7,8 @@ In this case study, we will work for Bellabeat, a high-tech manufacturer of heal
 
 ### Data Sources
 
-Cyclistic’s historical trip data: The primary dataset used for this analysis is the "Divvy_Trips_2020_Q1.csv" file, made available by Motivate International Inc. to analyze and identify trends within one quarter of a year. This public data can be used to explore how different customer types are using Cyclistic bikes.
+Fitbit Fitness Tracker Data: This Kaggle data set contains the following personal fitness tracker data from thirty Fitbit users, including heart rate, steps, sleep monitoring and information about daily activity that can be used to explore users’ habits. 
+
 
 ### Tools
 
