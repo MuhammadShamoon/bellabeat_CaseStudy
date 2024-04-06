@@ -68,9 +68,10 @@ ORDER BY
 
 The analysis results are summarized as follows:
 
-1. The average trip length of casual riders is approximately four times of annual members.
+1. MET is used to estimate the intensity of physical activities, but users with low METs also contain higher heart-rate.
 
-![trip length comparison](https://github.com/MuhammadShamoon/cyclistic_case_study/assets/52103515/cf941372-5a5a-4891-92f0-808945ca85f8)
+![Sheet 4](https://github.com/MuhammadShamoon/bellabeat_CaseStudy/assets/52103515/76415451-59ce-4814-945c-b6ff2e4c8251)
+
 
 2. During weekends, the annual members use bikes from afternoon to evening, but during weekdays they mostly use them at 8 am and 5 pm to commute to work.
 
