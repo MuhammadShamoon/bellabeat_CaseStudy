@@ -1,0 +1,55 @@
+---
+title: "daily_consumer"
+author: "muhammad shamoon"
+date: "2024-04-11"
+output: html_document
+---
+
+
+## Installing and loading common packages and libraries
+
+```{r}
+install.packages('tidyverse')
+library(tidyverse)
+```
+## Loading CSV files
+
+Here we'll create a dataframe named 'daily_activity' by doing union between two CSV files from the dataset.
+
+```{r}
+daily_activity_apr <- read.csv("dailyActivity_merged_mar-apr.csv")
+daily_activity_may <- read.csv("dailyActivity_merged_apr-may.csv")
+```
+
+
+```{r}
+daily_activity <- rbind(daily_activity_apr,daily_activity_may)
+```
+
+
+## Exploring the table
+
+```{r}
+colnames(daily_activity)
+```
+
+```{r}
+n_distinct(daily_activity$Id)
+```
+
+## Finding the percentage of everyday consumers
+
+The normal values for daily steps, calories burned and sedentary minutes for females can vary but we can segment everday consumers by applying general boundary values.
+
+```{r}
+everyday_consumer <- daily_activity %>%
+  filter(TotalSteps > 5000 &
+         Calories > 1200 &
+         SedentaryMinutes < 8*60) %>%
+#  distinct(Id) %>%
+  summarise(percentage = n_distinct(Id) / n_distinct(daily_activity$Id) * 100)
+```
+
+```{r}
+everyday_consumer$percentage
+```
