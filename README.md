@@ -26,60 +26,61 @@ In the initial data preparation phase, we performed the following tasks:
 
 - Following SQL code investigate the number of rides across each day in a week for both categories of users.
 
-```sql
-SELECT 
-  member_casual
-  ,day_of_week
-  ,COUNT(ride_id) AS ride_count
+#### Installing and loading common packages and libraries
 
-FROM 
-  `casestudy-416218.bike_share.Q1` 
+```{r}
+install.packages('tidyverse')
+library(tidyverse)
+```
+#### Loading CSV files
 
-GROUP BY
-  member_casual
-  ,day_of_week
+Here we'll create a dataframe named 'daily_activity' by doing union between two CSV files from the dataset.
 
-ORDER BY 
-  day_of_week
-  ,member_casual
+```{r}
+daily_activity_apr <- read.csv("dailyActivity_merged_mar-apr.csv")
+daily_activity_may <- read.csv("dailyActivity_merged_apr-may.csv")
 ```
 
-- Following SQL code helps to explore when most users use bikes during the day.
-
-```sql
-SELECT  
-  FORMAT_DATETIME('%H',started_at) AS start_time
-  ,member_casual
-  ,COUNT(ride_id) AS ride_count
-
-FROM 
-  `casestudy-416218.bike_share.Q1` 
-  
-GROUP BY 
-  start_time
-  ,member_casual  
-
-ORDER BY 
-  member_casual 
-  ,start_time
+```{r}
+daily_activity <- rbind(daily_activity_apr,daily_activity_may)
 ```
+
+#### Exploring the table
+
+```{r}
+colnames(daily_activity)
+```
+
+```{r}
+n_distinct(daily_activity$Id)
+```
+
+#### Finding the percentage of everyday consumers
+
+The normal values for daily steps, calories burned and sedentary minutes for females can vary but we can segment everday consumers by applying general boundary values.
+
+```{r}
+everyday_consumer <- daily_activity %>%
+  filter(TotalSteps > 5000 &
+         Calories > 1200 &
+         SedentaryMinutes < 8*60) %>%
+  summarise(percentage = n_distinct(Id) / n_distinct(daily_activity$Id) * 100)
+```
+
+```{r}
+everyday_consumer$percentage
+```
+
 
 ### Results
 
 The analysis results are summarized as follows:
 
-1. MET is used to estimate the intensity of physical activities, but users with low METs also contain higher heart-rate.
+1. Everyday consumers are among the primary users of smart products; from the above analysis using R, they are approximately 17 %. 
+
+2. MET is used to estimate the intensity of physical activities, but users with low METs also have higher heart rates. This reflects that these smart wearables are used by Athletes, Fitness Enthusiasts and patients as well. 
 
 ![Sheet 4](https://github.com/MuhammadShamoon/bellabeat_CaseStudy/assets/52103515/76415451-59ce-4814-945c-b6ff2e4c8251)
-
-
-2. During weekends, the annual members use bikes from afternoon to evening, but during weekdays they mostly use them at 8 am and 5 pm to commute to work.
-
-![Annual members](https://github.com/MuhammadShamoon/cyclistic_case_study/assets/52103515/9ed02246-bd2d-40bc-ab4a-ce18b9bd704b)
-
-3. The number of Casual riders reached its peak value around 2 pm and performed a bell-shaped pattern. They are more likely to ride for leisure.
-
-![Casual Riders Population](https://github.com/MuhammadShamoon/cyclistic_case_study/assets/52103515/154e52dd-ef2e-40d4-8ead-83b337f44604)
 
 
 ### Recommendations
@@ -98,7 +99,7 @@ Based on the analysis, we recommend the following actions:
 
 ### Limitations
 
-Due to privacy reasons, user information is not included in the dataset. Therefore, this analysis is based on the behaviour of individual rides instead of the customers.
+In this analysis, the sample consists of 35 observations. To increase the accuracy of the results, more observations are needed.
 
 
 
