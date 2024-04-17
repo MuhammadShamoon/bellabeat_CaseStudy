@@ -3,7 +3,7 @@
 ### Project Overview
 
 
-In this case study, we will work for Bellabeat, a high-tech manufacturer of health-focused products for women. Sršen, Chief Creative Officer of Bellabeat, knows that an analysis of available consumer data would reveal more opportunities for growth. She has asked the marketing analytics team to analyze smart device usage data to gain insight into how people already use their smart devices. Then, using this information, she would like high-level recommendations for how these trends can inform Bellabeat's marketing strategy.
+In this case study, we will work for Bellabeat, a high-tech manufacturer of health-focused products for women. The Chief Creative Officer of Bellabeat knows that an analysis of available consumer data would reveal more opportunities for growth. She has asked the marketing analytics team to analyze smart device usage data to gain insight into how people already use their smart devices. Then, using this information, she would like high-level recommendations for how these trends can inform Bellabeat's marketing strategy.
 
 ### Data Sources
 
@@ -24,7 +24,7 @@ In the initial data preparation phase, we performed the following tasks:
 
 ### Data Analysis
 
-- Following SQL code investigate the number of rides across each day in a week for both categories of users.
+- Following R code investigate the number of everyday consumers.
 
 #### Installing and loading common packages and libraries
 
