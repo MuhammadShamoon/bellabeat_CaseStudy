@@ -34,7 +34,7 @@ library(tidyverse)
 ```
 #### Loading CSV files
 
-Here we'll create a dataframe named 'daily_activity' by doing union between two CSV files from the dataset.
+Here we'll create a dataframe named 'daily_activity' by doing a union between two CSV files from the dataset.
 
 ```{r}
 daily_activity_apr <- read.csv("dailyActivity_merged_mar-apr.csv")
@@ -57,7 +57,7 @@ n_distinct(daily_activity$Id)
 
 #### Finding the percentage of everyday consumers
 
-The normal values for daily steps, calories burned and sedentary minutes for females can vary but we can segment everday consumers by applying general boundary values.
+The normal values for daily steps, calories burned and sedentary minutes for females can vary but we can segment everyday consumers by applying general boundary values.
 
 ```{r}
 everyday_consumer <- daily_activity %>%
@@ -87,15 +87,12 @@ The analysis results are summarized as follows:
 
 Based on the analysis, we recommend the following actions:
 
-- Create segments based on behaviour patterns such as trip length and timing of bike usage and identify the daily subscribers who demonstrate patterns similar to annual members in terms of usage.
+- Collaborate with influencers, fitness experts, healthcare professionals, and women advocates to endorse and promote the products to their audiences.
 
-- Highlight how an annual membership provides unlimited bike access, encouraging more frequent and varied usage.
+- Maintain a strong presence across various channels, including online retailers, the company's e-commerce website and social media platforms.
 
-- Provide incentives such as free months, discounted rates, or bonus ride credits to encourage conversion.
-
-- Organize community events or group rides to engage current daily subscribers and showcase annual membership benefits.
-
-- Incorporate user feedback to refine and improve the conversion process over time.
+- Create informative and engaging content that educates and empowers the target audience about health and wellness topics relevant to women. 
+This content can include blog posts, articles, videos, and infographics.
 
 ### Limitations
 
